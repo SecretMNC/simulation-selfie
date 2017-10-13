@@ -20,7 +20,7 @@ app.get('/api/bin/:id', ctrl.getOneBin);
 
 app.put('/api/bin/:id', ctrl.updateBin);
 
-// app.delete('/api/bin/:id', ctrl.deleteBin);
+app.delete('/api/bin/:id', ctrl.deleteBin);
 
 // api.post('/api/bin/:id', ctrl.createNewBin);
 

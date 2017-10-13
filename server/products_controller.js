@@ -23,7 +23,11 @@ module.exports = {
             res.status(500) );
     },
     deleteBin: function (req, res){
-
+        req.app.get('db').delete_bin(req.params.id)
+        .then(e=> {
+            res.status(200).send()
+        }).catch ( () =>
+        res.status(500) );
     },
     createNewBin: function (req, res){
 
