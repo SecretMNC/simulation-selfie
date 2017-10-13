@@ -22,7 +22,7 @@ app.put('/api/bin/:id', ctrl.updateBin);
 
 app.delete('/api/bin/:id', ctrl.deleteBin);
 
-// api.post('/api/bin/:id', ctrl.createNewBin);
+api.post('/api/bin/:id', ctrl.createNewBin);
 
 const port = process.env.PORT || 8080
 app.listen( port, () => console.log(`You are listening to a server on port ${port}!`))

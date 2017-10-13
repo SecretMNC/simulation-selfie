@@ -20,17 +20,19 @@ module.exports = {
         req.app.get('db').update_bin(req.params.id, req.body.name, req.body.price).then (e =>
              res.status(200).send(e) )
              .catch ( () =>
-            res.status(500) );
+            res.status(500).send() );
     },
     deleteBin: function (req, res){
         req.app.get('db').delete_bin(req.params.id)
         .then(e=> {
             res.status(200).send()
         }).catch ( () =>
-        res.status(500) );
+        res.status(500).send() );
     },
     createNewBin: function (req, res){
-
+        req.app.get('db').create_new_bin(req.body.shelfid, req.params.id, req.body.name, req.body.price, req.body.image)
+            .then ( e => res.status(200).send() )
+            .catch ( () => res.status(500).send() )
     }
 
 };
