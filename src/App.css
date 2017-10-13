@@ -1,28 +1,100 @@
 .App {
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.light-red-background {
+  background-color: #d34735;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.green-background {
+  background-color: #40f99b;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ab2a19;
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+.title {
+  font-weight: 700;
+  font-size: 30px;
+  width: auto;
+  height: auto;
+  position: relative;
+  left: -165px;
 }
 
-.App-intro {
-  font-size: large;
+.shelves-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+
+.shelf-container{
+  width: 500px;
+  height: 60px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+.shelf-title {
+  position: relative;
+  left: -110px;
+  font-weight: 700;
+}
+
+.bin-title {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+}
+
+
+.add-inventory {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  color: black;
+}
+
+.input-box-title {
+  color: black;
+  font-weight: 700;
+  margin-top: 0;
+  margin-left: 10px;
+  margin-bottom: 3px;
+  position: relative;
+  left: -200px;
+  font-size: 30px;
+}
+
+.input-box {
+  border: 1px solid #ab2a19;
+  border-radius: 3px;
+  padding: 12px;
+  min-width: 500px;
+  width: auto;
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
