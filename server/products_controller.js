@@ -2,7 +2,6 @@ module.exports = {
     getAllBins: function (req, res){
         console.log(req.params.id)
         req.app.get('db').get_shelf(req.params.id).then( e => {
-                console.log(e);
                 res.status(200).send(e)} )
             .catch( () => res.status(500).send() );
     },
@@ -23,7 +22,7 @@ module.exports = {
     },
 
     createNewBin: function (req, res){
-        
+
     }
 
 };
