@@ -9,21 +9,22 @@ module.exports = {
                 console.log(e);
                 res.status(200).send(e)} )
     },
-
     getOneBin: function (req, res){
+        console.log(req.params.id)
         req.app.get('db').get_bin(req.params.id).then (e => 
             res.status(200).send(e) )
+            .catch ( () =>
+            res.status(500).send() );
     },
-
     updateBin: function (req, res){
-        req.app.get('db').update_bin(req.params.id)
-            .then ()
+        req.app.get('db').update_bin(req.params.id, req.body.name, req.body.price).then (e =>
+             res.status(200).send(e) )
+             .catch ( () =>
+            res.status(500) );
     },
-
     deleteBin: function (req, res){
 
     },
-
     createNewBin: function (req, res){
 
     }

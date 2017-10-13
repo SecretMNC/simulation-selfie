@@ -1,1 +1,1 @@
-delete * from products where productid = $1;
+delete from products where productid = $1;

@@ -16,9 +16,9 @@ massive(process.env.CONNECTION_STRING).then(db =>{
 
 app.get('/api/shelf/:id', ctrl.getAllBins);
 
-app.get('api/bin/:id', ctrl.getOneBin);
+app.get('/api/bin/:id', ctrl.getOneBin);
 
-// app.put('/api/bin/:id', ctrl.updateBin);
+app.put('/api/bin/:id', ctrl.updateBin);
 
 // app.delete('/api/bin/:id', ctrl.deleteBin);
 
